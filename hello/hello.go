@@ -6,6 +6,20 @@ import (
 	"goexample/stringutil"
 )
 
+func fib(x int) int64 {
+	var f1, f2 int64 = 0,1
+
+	if x<=1 {
+		return int64(x)
+	} else {
+		for i :=0; i<x; i++ {
+			f1, f2 = f2, f1+f2
+		}
+		
+		return f1
+	}
+}
+
 //decode arbitrary JSON data
 func handlerArbitraryStringfy() {
 	b := []byte(`{"Name":"Wednesday","Age":6,"Parents":["Gomez","Morticia"]}`)
@@ -36,4 +50,5 @@ func main() {
 	fmt.Printf("hello World!\n")
 	fmt.Println(stringutil.Reverse("!oG ,olleH"))
 	handlerArbitraryStringfy()
+	fmt.Println(fib(6))
 }

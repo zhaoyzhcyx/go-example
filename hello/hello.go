@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"goexample/stringutil"
+	"go-example/stringutil"
 )
 
 func fib(x int) int64 {
@@ -47,7 +47,7 @@ func handlerArbitraryStringfy() {
 }
 
 func main() {
-	fmt.Printf("hello World!\n")
+	fmt.Printf("hello World!!\n")
 	fmt.Println(stringutil.Reverse("!oG ,olleH"))
 	handlerArbitraryStringfy()
 	fmt.Println(fib(6))
